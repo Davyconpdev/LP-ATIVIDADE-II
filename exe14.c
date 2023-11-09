@@ -13,19 +13,23 @@ int main()
 
     do
     {
-        printf("digite o %dº número:", i + 1);
+        printf("digite um número:");
         scanf("%d", &numero);
-        i++;
+        
 
         if (numero % 2 == 0)
         {
             par++;
-            somaPar += i;
+
+            somaPar = somaPar + numero;
+            
         }
         else if (numero % 2 == 1)
         {
             impar++;
-            somaImpar += i;
+
+            somaImpar = somaImpar + numero;
+            
         }
         fflush(stdin);
 
@@ -33,9 +37,12 @@ int main()
 
     mediaPar = somaPar / par;
     mediaImpar = somaImpar / impar;
+
+
     printf("\n");
     printf("números pares: %d\n", par);
     printf("números ímpares: %d\n", impar);
+    printf("\n");
     printf("média números pares: %.1f\n", mediaPar);
     printf("média números ímpares: %.1f\n", mediaImpar);
 
